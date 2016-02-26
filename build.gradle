@@ -26,9 +26,13 @@ targetCompatibility = 1.7
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile 'org.jongo:jongo:1.1'
+    compile 'org.mongodb:mongo-java-driver:2.+'
     testCompile("junit:junit")
+    testCompile 'org.mockito:mockito-all:1.+'
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.11'
