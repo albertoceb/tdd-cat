@@ -15,7 +15,6 @@ public class TicTacToeCollection {
 		return mongoCollection;
 	}
 
-
 	public TicTacToeCollection() throws UnknownHostException {
 		DB db = new MongoClient().getDB("tic-tac-toe");
 		mongoCollection = new Jongo(db).getCollection("catgame");
@@ -28,5 +27,8 @@ public class TicTacToeCollection {
 		} catch (Exception e) {
 			return false;
 		}
+	}
+	public void drop(){
+		getMongoCollection().drop();
 	}
 }
